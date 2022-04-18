@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "kassandrabot"
+  },
+  "targets": {
+    "kassandrabot": {
+      "hosting": {
+        "commands": [
+          "commands"
+        ]
+      }
+    }
+  }
+}
