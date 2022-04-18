@@ -4,7 +4,6 @@ import './App.css'
 import { app } from './firebase.js'
 import { getFirestore, collection, getDocs } from 'firebase/firestore'
 const fs = getFirestore(app)
-import newkass from './assets/newkass.png'
 
 function App() {
   const [commands, setCommands] = useState([])
@@ -19,15 +18,11 @@ function App() {
       })
   }, [])
 
-  useEffect(() => {
-    document.getElementById('newkass').src = newkass.url
-  })
-
 
   return (
     <div className="App">
       <header className="App-header">
-        <img id="newkass" className="App-logo" alt="kassandra-logo" />
+        <img src="https://github.com/rconjoe/commands.kirby.gg/blob/master/src/assets/newkass.png?raw=true" className="App-logo" alt="kassandra-logo" />
         <strong><h1 className={"mt-12 mb-8 text-4xl"}>Kassandra Commands for <a className={"text-blue-400 hover:text-blue-900"} href="https://twitch.tv/kcckirby">KCCKirby</a>!</h1></strong>
         <div className={"flex flex-col gap-2 mb-12"}>
           {commands.map(command => <div className={"text-pink-700"} key={command.name}> !{command.name} </div>)}
